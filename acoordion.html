@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        .accordion{
+            width: 500px;
+        }
+        input[id *="question"] {
+            display: none;
+        }
+        input[id *="question"]:checked + label +div {
+            max-height:100px;
+        }
+        input[id *='question']:checked + label em{
+            background-position:0 -30px;
+        }
+
+        input[id *='question']+label {
+            display: block;
+            padding: 20px;
+            border: 1px solid black;
+            border-bottom: 0;
+            color: #fff;
+            font-weight: 900;
+            background: #2151ff;
+            position: relative;
+        }
+
+        em {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            display: inline-block;
+            background: url('arrow.png') 0 0 no-repeat;
+        }
+
+        .answer {
+            max-height: 0;
+            transition: all .35s;
+            overflow: hidden;
+            background: #ebf8ff;
+            font-size: 11px;
+        }
+
+        .answer p {
+            display: inline-block;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        <input type="checkbox" id="question01">
+        <label for="question01">질문1: 아코디언을 영어로?<em></em></label>
+        <div class='answer'>
+            <p>답변: accordion</p>
+        </div>
+        <input type="checkbox" id="question02">
+        <label for="question02">질문2: 코딩을 영어로?<em></em></label>
+        <div class='answer'>
+            <p>답변: coding</p>
+        </div>
+        <input type="checkbox" id="question03">
+        <label for="question03">질문3: 브라우저용 코딩언어는?<em></em></label>
+        <div class='answer'>
+            <p>답변: javascript</p>
+        </div>
+        <input type="checkbox" id="question04">
+        <label for="question04">질문4: dart언어로 만든 프레임워크는?<em></em></label>
+        <div class='answer'>
+            <p>답변: flutter</p>
+        </div>
+    </div>
+
+    <script src='script.js'></script>
+</body>
+
+</html>
