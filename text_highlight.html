@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        .desc{
+            background:linear-gradient(to right, rgba(255,255,255,0) 50%, #f3be00 50%);
+            background-size: 200%;
+            transition: .35s;
+        }
+
+        .highlighter:hover +.desc{
+            background-position: -100% ;            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="textbox">
+        <button class="highlighter">요기에 마우스를 올려 보세요.</button>
+        <span class="desc">웹 비주얼 아트 코딩!</span>
+        <div>이번 강좌는 마우스가 올라가면 텍스트에 형광팬으로 그어지는 효과입니다. 자 시작해 봅시다.</div>
+        <!-- <span class="desc">같이 색칠해지는 곳</span> -->
+    </div>
+    
+
+
+    <script src='script.js'></script>
+</body>
+
+</html>
